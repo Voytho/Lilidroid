@@ -22,14 +22,14 @@ class Config(BaseModel):
 
 config = Config()
 parser = argparse.ArgumentParser(
-    description='Lilidroid v4.0 - A tool to build teardroid spyware for Android devices.')
+    description='Lilidroid v4.0 - A tool to build Lilidroid spyware for Android devices.')
 
 
-parser.add_argument('-v', '--version', help='Version of Teardroid',
+parser.add_argument('-v', '--version', help='Version of Lilidroid',
                     action='version', version=config.version)
 
 parser.add_argument(
-    '-b', '--build', help='Build Teardroid with custom name [ex: Lilidroid.py -b teardroid]', metavar='')
+    '-b', '--build', help='Build Lilidroid with custom name [ex: Teardroid.py -b teardroid]', metavar='')
 
 
 def banner() -> Str:
@@ -56,7 +56,7 @@ def builder(name: str) -> None:
     Teardroid.print_result("Compiling Teardroid completed")
     Teardroid.print_result("Compressing APK Files using zipalign")
     Teardroid.CompressAPK()
-    Teardroid.print_result("Signing Teardroid")
+    Teardroid.print_result("Signing Lilidroid")
     Teardroid.SingAPK()
     Teardroid.Clear()
     Teardroid.print_result("Proccess Completed Successfully")
