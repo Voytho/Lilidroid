@@ -1,5 +1,5 @@
 # Lilidroid v4
-![Screenshot](https://raw.githubusercontent.com/Voytho/Lilidroid/master/img/IMG-20220122-WA0000_RdKN5Rv3U.jpg)
+
 
 It's easy to use android botnet work without port forwarding, vps and android studio
 
@@ -75,14 +75,14 @@ $ python Lilidroid.py -b your_app_name
 - You will also be prompted for the title and text of the notification. Enter what you want to display on the notification.
 - DONE
 
-[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/Voytho/Lilidroid_api)
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/Voytho/Lilidroidv4_api)
 
 ### Manually deploy the Lilidroid control panel
 - Set up an account at [deta.sh](https://web.deta.sh/)
 - Install [Deta Cli](https://docs.deta.sh/docs/cli/install)
 - Logging in to Deta via the CLI
 - Create a new Python Micro
-- Clone [Lilidroidv4_api](https://github.com/Voytho/Lilidroid_api) repo
+- Clone [Lilidroidv4_api](https://github.com/Voytho/Lilidroidv4_api) repo
 - Move all Lilidroidv4_api Files to your deta micro folder.
 - Deploy the Control panel using the following command.
 ```bash

